@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+  --bg-header: #fff;
+  --text-color: #2b3945;
+  --bg-body: #e9e8e8;
+  --bg-footer: #2b3945;
+  --text-footer: #fff;
+  --bg-shadow: #c7c6c6;
+}
+
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  font-family: 'Cairo', sans-serif;
+  font-family: 'Work Sans', sans-serif;
+}
+
+/* theme styling - Here, we set data-them as "*/
+body {
+  background-color: var(--bg-body);
+}
+
+/* dark theme styling - Here, we set data-them as "dark"*/
+body.dark {
+  --bg-header: #2b3945;
+  --text-color: #fff;
+  --bg-body: #202c37;
+  --bg-footer: #2b3945;
+  --text-footer: #fff;
+  background-color: var(--bg-body);
+  --bg-shadow: #2c3b49;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* start header */
+header {
+  width: 100%;
+  height: 100px;
+}
+
+header,
+.countries-header .search input[type="search"],
+.countries-header .search,
+.countries-header .filter select,
+.countries-body .countries-body_items,
+.about a {
+  background-color: var(--bg-header);
+  color: var(--text-color);
+}
+
+.loading {
+  color: var(--text-color);
+}
+
+.container {
+  width: 80%;
+  margin: auto auto;
+}
+
+header > .container {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header > .container > button {
+  background-color: inherit;
+  color: inherit;
+  text-transform: capitalize;
+  border: none;
+  font-size: 18px;
+}
+
+header > .container > button:hover {
+  padding: 10px 5px;
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+}
+
+header > .container > button:hover {
+  background-color: var(--bg-body);
+}
+/* end header */
+
+/* start home page */
+.countries {
+  display: flex;
+  flex-direction: column;
+}
+
+.countries > .countries-header {
+  margin-top: 45px;
+  margin-bottom: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.countries-header .search {
+  position: relative;
+  width: 30%;
+  border-radius: 8px;
+}
+
+.countries-header .search,
+.countries-header .filter select,
+.about > a {
+  box-shadow: 2px -2px 4px var(--bg-shadow),-2px 2px 4px var(--bg-shadow);
+}
+
+
+.countries-header .search i {
+  position: absolute;
+  margin-top: 3%;
+  margin-left: 4%;
+}
+
+.countries-header .search input[type="search"] {
+  padding: 10px 40px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+.countries-header .filter {
+  width: 15%;
+}
+
+.countries-header .filter > div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--bg-header);
+  border-radius: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+  align-content: stretch;
+  justify-content: space-between;
+}
+
+.countries-header .filter select {
+  width: 100%;
+  border: none;
+  background-color: var(--bg-header);
+  border-radius: 8px;
+  padding: 7px 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.countries-header .filter select option {
+  width: 100%;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.countries-body {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.countries-body .countries-body_items {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 45px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.countries-body .countries-body_items:hover,
+.about a:hover {
+  transform: scale(1.1, 1.2);
+  transition: all 2s;
+}
+
+.countries-body .countries-body_items img {
+  width: 100%;
+  height: 45%;
+  border-radius: 8px 8px 0 0;
+}
+
+.countries-body .countries-body_items > p,
+.countries-body .countries-body_items > div {
+    margin-left: 10%;
+    margin-top: 5%;
+    font-weight: 400;
+}
+
+.countries-body .countries-body_items > div {
+  display: flex;
+  flex-direction: row;
+}
+
+.countries-body .countries-body_items > div:last-of-type {
+  margin-bottom: 5px;
+}
+
+.countries-body .countries-body_items > div span {
+  font-size: 14px;
+  opacity: 0.8;
+}
+/* end home page */
+
+/* start about page */
+.about {
+  margin-top: 45px;
+  margin-bottom: 45px;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+}
+
+.about > a {
+  align-self: flex-start;
+  border-radius: 8px;
+}
+
+.about a {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.about .about-body {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+}
+
+.about .about-body img {
+  margin-right: 10%;
+  width: 340px;
+  height: 200px;
+}
+
+.about .about-body .about-content {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+
+}
+
+.about .about-body .about-content > p {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.about .about-body .about-content > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.about .about-body .about-content .side-items {
+  width: 50%;
+}
+
+.about .about-body .about-content .side-items > div {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.about .about-body .about-content .side-items > div > p,
+.about .about-body .about-content > div:nth-of-type(2) > p {
+  font-weight: 600;
+}
+
+.about .about-body .about-content > p,
+.about .about-body .about-content > div p,
+.about .about-body .about-content > div span {
+  color: var(--text-color);
+}
+
+.about .about-body .about-content > div:nth-of-type(2) a {
+  font-weight: 400;
+  font-size: 14px;
+  margin-right: 15px;
+  border-radius: 0;
+  border: 1px solid var(--body-dark);
+}
+/* end about page */
+
+/* start not-found page */
+.not__found {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  color: crimson;
+}
+/* end not-found page */
+
+/* start footer */
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 50px;
+  background-color: var(--bg-footer);
+  color: var(--text-footer);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer a {
+  color: var(--text-footer) !important;
+  text-decoration: underline;
+  padding-left: 7px;
+}
+/* end footer */
+
+
